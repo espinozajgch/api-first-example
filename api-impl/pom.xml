@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example.api</groupId>
-    <artifactId>api-first-impl</artifactId>
+    <artifactId>api-impl</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>API implementation</description>
@@ -17,15 +17,16 @@
     </parent>
 
     <properties>
-        <maven.compiler.source>20</maven.compiler.source>
-        <maven.compiler.target>20</maven.compiler.target>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.example.api</groupId>
-            <artifactId>api-first-spec</artifactId>
+            <artifactId>api-spec</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 

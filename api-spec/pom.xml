@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example.api</groupId>
-    <artifactId>api-first-spec</artifactId>
+    <artifactId>api-spec</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>API specification</description>
@@ -17,14 +17,16 @@
     </parent>
 
     <properties>
-        <openapi.generator.version>6.6.0</openapi.generator.version>
-        <openapi.package.api>org.example.api.api-first-spec.controller.v1</openapi.package.api>
-        <openapi.package.model>org.example.api.api-first-spec.dto.v1</openapi.package.model>
+        <openapi-generator.version>6.6.0</openapi-generator.version>
+        <openapi.package.api>org.example.api.spec.controller.v1</openapi.package.api>
+        <openapi.package.model>org.example.api.spec.dto.v1</openapi.package.model>
+
         <swagger.annotations.version>2.2.9</swagger.annotations.version>
         <jackson-nullable.version>0.2.6</jackson-nullable.version>
 
-        <maven.compiler.source>20</maven.compiler.source>
-        <maven.compiler.target>20</maven.compiler.target>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -47,12 +49,6 @@
             <artifactId>jackson-databind-nullable</artifactId>
             <version>${jackson-nullable.version}</version>
         </dependency>
-
-        <!--dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-annotations</artifactId>
-            <version>1.6.11</version>
-        </dependency-->
 
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -77,7 +73,7 @@
             <plugin>
                 <groupId>org.openapitools</groupId>
                 <artifactId>openapi-generator-maven-plugin</artifactId>
-                <version>6.6.0</version>
+                <version>${openapi-generator.version}</version>
                 <executions>
                     <execution>
                         <id>generate-api-code</id>
@@ -86,7 +82,6 @@
                         </goals>
                         <configuration>
                             <inputSpec>${project.basedir}/src/main/resources/openapi.yaml</inputSpec>
-                            <!--output>${project.build.directory}/generated-sources/api</output-->
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <generatorName>spring</generatorName>
                             <strictSpec>true</strictSpec>
@@ -94,7 +89,6 @@
                             <generateModelTests>false</generateModelTests>
                             <configOptions>
                                 <controllerThrowsExceptions>java.io.IOException,com.example.NotFoundException</controllerThrowsExceptions>
-                                <!--library>spring</library-->
                                 <interfaceOnly>true</interfaceOnly>
                                 <skipDefaultInterface>true</skipDefaultInterface>
                                 <useBeanValidation>true</useBeanValidation>

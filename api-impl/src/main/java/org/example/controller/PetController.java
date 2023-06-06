@@ -1,8 +1,8 @@
 package org.example.controller;
 
-import org.example.api.api_first_spec.controller.v1.PetApi;
-import org.example.api.api_first_spec.dto.v1.ModelApiResponse;
-import org.example.api.api_first_spec.dto.v1.Pet;
+import org.example.api.spec.controller.v1.PetApi;
+import org.example.api.spec.dto.v1.ModelApiResponse;
+import org.example.api.spec.dto.v1.Pet;
 import org.springframework.core.io.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -11,6 +11,7 @@ import java.util.List;
 
 @Controller
 public class PetController implements PetApi {
+
     @Override
     public ResponseEntity<Pet> addPet(Pet pet) {
 
