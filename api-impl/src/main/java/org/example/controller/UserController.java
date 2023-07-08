@@ -1,8 +1,7 @@
 package org.example.controller;
 
-import org.example.api.spec.controller.v1.UserApi;
-import org.example.api.spec.dto.v1.User;
-import org.springframework.http.HttpStatus;
+import org.example.api.spec.controller.UserApi;
+import org.example.api.spec.dto.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 

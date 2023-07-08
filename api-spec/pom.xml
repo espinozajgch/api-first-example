@@ -18,10 +18,10 @@
 
     <properties>
         <openapi-generator.version>6.6.0</openapi-generator.version>
-        <openapi.package.api>org.example.api.spec.controller.v1</openapi.package.api>
-        <openapi.package.model>org.example.api.spec.dto.v1</openapi.package.model>
+        <openapi.package.api>org.example.api.spec.controller</openapi.package.api>
+        <openapi.package.model>org.example.api.spec.dto</openapi.package.model>
 
-        <swagger.annotations.version>2.2.9</swagger.annotations.version>
+        <swagger.annotations.version>2.2.14</swagger.annotations.version>
         <jackson-nullable.version>0.2.6</jackson-nullable.version>
 
         <java.version>17</java.version>
