@@ -86,7 +86,9 @@
                             <generatorName>spring</generatorName>
                             <strictSpec>true</strictSpec>
                             <generateApiTests>false</generateApiTests>
+                            <generateApiDocumentation>false</generateApiDocumentation>
                             <generateModelTests>false</generateModelTests>
+                            <generateModelDocumentation>false</generateModelDocumentation>
                             <configOptions>
                                 <controllerThrowsExceptions>java.io.IOException,com.example.NotFoundException</controllerThrowsExceptions>
                                 <interfaceOnly>true</interfaceOnly>
